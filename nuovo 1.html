@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cinema</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="stylesheet" href="docs/stile.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+  <a href="" class="logo">il Galleria</a> <img src="img/logos.png" alt="il Galleria">
+  <div class="header-right">
+    <a class="active" href="#home">Home</a>
+    <a href="https://www.instagram.com/giusee.campanella/">Staff</a>
+  </div>
+</div>
+<div class="navbar">
+	<h3>Saldo: <b id="saldo"></b> </h3>
+</div>
+<section class="hero-section"> 
+  <div class="card-grid">
+    <a class="card" href="#">
+      <div class="card__background" style="background-image: url('img/foto0.jpg');"></div>
+      <div class="card__content">
+        <p class="card__category">Sala 1</p>
+        <h3 class="card__heading">Persi nel tempo</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<button id="tasto0" class="noselect" onclick="popup(0)">Prenota</button>
+	  </div>
+    </a>
+    <a class="card" href="#">
+      <div class="card__background" style="background-image: url('img/foto1.jpg');"></div>
+      <div class="card__content">
+        <p class="card__category">Sala 2</p>
+        <h3 class="card__heading">Harry Potter e i doni della morte 2</h3><br><br><br><br><br><br><br><br><br><br>
+		<button id="tasto1" class="noselect" onclick="popup(1)">Prenota</button>
+	 </div>
+    </a>
+    <a class="card" href="#">
+      <div class="card__background" style="background-image: url('img/foto2.jpg');"></div>
+      <div class="card__content">
+        <p class="card__category">Sala 3</p>
+        <h3 class="card__heading">Inside Out</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<button id="tasto2" class="noselect" onclick="popup(2)">Prenota</button>
+      </div>
+	</a>
+</section>
+<div id="rosso" class="alert sticky" hidden>
+  <span class="closebtn">&times;</span>  
+  <strong>Errore!</strong> Compila correttamente tutti i campi!
+</div>
+<div id="verde" class="alert success sticky" hidden>
+  <span class="closebtn">&times;</span>  
+  <strong>Transizione completata!</strong> Biglietto acquistato con successo!
+</div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>il Galleria</h2>
+    </div>
+    <div class="modal-body">
+		<h1 id="sala"></h1>
+	  	<div id="postlib">Biglietti rimasti:</div>
+		<h4 >Che biglietto intendi comprare?</h4>
+ 		<input type="radio" name="bigl" id="bigl" value="Ridotto"> Ridotto <span style="color:#339933">3.50€</span><br>
+  		<input type="radio" name="bigl" id="bigl" value="Intero"> Intero&nbsp&nbsp <span style="color:#339933">5.00€</span><br>
+			<br>
+		<h4>Numero biglietti</h4><br>
+		<input  value="1" min="1" max="4" type="number" id="numbi"><br>
+    </div>
+		<br>
+    <div class="modal-footer">
+		<button id="button" onclick="runCode()" class="golden-btn">Acquista</button>
+    </div>
+  </div>
+</div>
+<!-- Fine Modal -->
+</body>
+<script src="docs/script.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xxjapp/xdialog@3/xdialog.min.css"/>
+<script src="https://cdn.jsdelivr.net/gh/xxjapp/xdialog@3/xdialog.min.js"></script>
+</html>
